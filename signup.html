@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exclusive – Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="homepage.css" />
+  <link rel="stylesheet" href="signup.css" />
+
+  <script src="script.js" defer></script>
+</head>
+<body class="page page--auth">
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <p class="top-bar__text">
+        Summer Sale For All Swim Suits And Free Express Delivery – OFF 50%!
+        <a href="#" class="top-bar__link">Shop Now</a>
+      </p>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="homepage.html" class="logo">Exclusive</a>
+
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__list">
+          <li><a href="homepage.html" class="nav__link">Home</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="signup.html" class="nav__link nav__link--active">Sign Up</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="header-search">
+          <input type="text" class="header-search__input" placeholder="What are you looking for?" />
+          <span class="header-search__icon">🔍</span>
+        </div>
+        <a href="wishlist.html" class="header-icon">♡</a>
+        <a href="cart.html" class="header-icon">🛒</a>
+      </div>
+    </div>
+  </header>
+  <main class="auth">
+    <div class="container auth__layout">
+      <aside class="auth-media">
+        <img src="signupimage.jpg" alt="Shopping illustration" class="auth-media__img" />
+      </aside>
+<!--- marjvena mxare ------>
+      <section class="auth-card">
+        <h1 class="auth-title">Create an account</h1>
+        <p class="auth-subtitle">Enter your details below</p>
+
+        <form class="auth-form" action="#" method="post">
+          <div class="field">
+            <label for="name" class="field__label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="field__input"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="email" class="field__label">Email or Phone Number</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="field__input"
+              placeholder="Email or Phone Number"
+              required
+            />
+          </div>
+
+          <div class="field field--password">
+            <label for="password" class="field__label">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="field__input js-auth-password"
+              placeholder="Password"
+              required
+            />
+            <button type="button" class="field__toggle js-toggle-password" aria-label="Show password">
+              👁
+            </button>
+          </div>
+
+          <button type="submit" class="btn btn--primary auth-form__submit">
+            Create Account
+          </button>
+
+          <button type="button" class="btn btn--google auth-form__google">
+            <span class="btn-google__icon">G</span>
+            Sign up with Google
+          </button>
+        </form>
+
+        <p class="auth-extra">
+          Already have an account?
+          <a href="#" class="auth-extra__link">Log in</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!--------------------isev footeri --------------->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__column">
+        <h3 class="footer__logo">Exclusive</h3>
+        <p class="footer__subtitle">Subscribe</p>
+        <p>Get 10% off your first order</p>
+        <form action="#" class="footer__form">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">➤</button>
+        </form>
+      </div>
+
+      <div class="footer__column">
+        <h4>Support</h4>
+        <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+        <p>exclusive@gmail.com</p>
+        <p>+88015-88888-9999</p>
+      </div>
+
+      <div class="footer__column">
+        <h4>Account</h4>
+        <a href="#">My Account</a>
+        <a href="#">Login / Register</a>
+        <a href="#">Cart</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Shop</a>
+      </div>
+
+      <div class="footer__column">
+        <h4>Quick Link</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms Of Use</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© Copyright Rimel 2022. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

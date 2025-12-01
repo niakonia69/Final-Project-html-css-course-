@@ -1,0 +1,925 @@
+/*ferebi figmadan rom davimaxsovro */
+:root {
+  --color-primary: #ffffff;     
+  --color-primary1: #363738;     
+  --color-secondary: #f5f5f5;    
+  --color-secondary1: #fef2f2;   
+  --color-bg: #ffffff;           
+  --color-text: #000000;        
+  --color-text1: #7d8184;        
+  --color-text2: #000000;        
+  --color-button: #000000;       
+  --color-secondary2: #db4444;   
+  --color-button1: #00ff66;      
+  --color-button2: #db4444;      
+  --color-hover-button: #e07575; 
+  --color-hover-button2: #47505e;
+
+  --shadow-soft: 0 0 1px rgba(0, 0, 0, 0.3); 
+
+  --container-width: 1170px;
+}
+
+/* --------- dawyeba--------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page {
+  background-color: var(--color-bg);
+}
+
+/* ------ fasdaklebis xazi---------- */
+
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.top-bar__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.top-bar__text {
+  margin: 0;
+}
+
+.top-bar__link {
+  margin-left: 8px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* -------headeri --------- */
+
+.site-header {
+  background-color: var(--color-primary);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 24px 0;
+  column-gap: 32px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* es navigacia */
+
+.nav {
+  justify-self: center;
+}
+
+.nav__list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav__link {
+  font-size: 1rem;
+  color: var(--color-text1);
+  position: relative;
+}
+
+.nav__link--active {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #000;
+}
+
+/* telefonosi navigaciis toggle*/
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin-bottom: 3px;
+  background-color: #000;
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-search {
+  background-color: var(--color-secondary);
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 260px;
+}
+
+.header-search__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.header-search__icon {
+  font-size: 1rem;
+}
+
+.header-icon {
+  font-size: 1.2rem;
+}
+.hero {
+  padding: 40px 0 60px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 40px;
+}
+
+/* kategoriebis listi */
+
+.hero-categories {
+  border-right: 1px solid #f0f0f0;
+  padding-right: 24px;
+}
+
+.hero-categories__list li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text1);
+}
+
+.hero-categories__list li span {
+  font-size: 1.1rem;
+}
+
+.hero-banner {
+  padding-left: 16px;
+}
+
+.hero-banner__inner {
+  background-color: #000;
+  border-radius: 8px;
+  color: #fff;
+  padding: 40px 56px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-banner__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.hero-banner__eyebrow-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-banner__title {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.hero-banner__cta {
+  margin-top: 8px;
+}
+
+.hero-banner__image {
+  justify-self: flex-end;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section--full {
+  padding: 80px 0;
+}
+
+.section-header {
+  margin-bottom: 32px;
+}
+
+.section-header--with-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.section-header--between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.section-pill__bar {
+  width: 20px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.section-pill__bar--secondary2 {
+  background-color: var(--color-secondary2);
+}
+
+.section-pill__label {
+  color: var(--color-secondary2);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 12px 32px;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn--ghost {
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+}
+
+.btn--secondary2 {
+  background-color: var(--color-secondary2);
+  color: #fff;
+}
+
+.btn--secondary2:hover {
+  background-color: var(--color-hover-button);
+}
+
+.btn--button1 {
+  background-color: var(--color-button1);
+  color: #000;
+}
+
+.btn--button1:hover {
+  background-color: #00e05c;
+}
+
+.btn--black {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn--black:hover {
+  background-color: #333;
+}
+
+/* ------- is dros ro itvlis ------- */
+
+.countdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.countdown__item {
+  text-align: center;
+}
+
+.countdown__label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-text1);
+}
+
+.countdown__value {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.countdown__colon {
+  font-size: 1.6rem;
+  color: var(--color-secondary2);
+}
+
+
+.products-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 16px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.product-card__image {
+  background-color: var(--color-secondary);
+  padding: 24px;
+  text-align: center;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--color-secondary2);
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.product-card__wishlist,
+.product-card__view {
+  position: absolute;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.product-card__wishlist {
+  top: 16px;
+}
+
+.product-card__view {
+  top: 60px;
+}
+
+.product-card__body {
+  padding: 12px 16px 0;
+}
+
+.product-card__title {
+  font-size: 0.95rem;
+  margin: 0 0 8px;
+}
+
+.product-card__prices {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.product-card__price--current {
+  color: var(--color-secondary2);
+  font-weight: 500;
+}
+
+.product-card__price--old {
+  color: var(--color-text1);
+  text-decoration: line-through;
+  font-size: 0.85rem;
+}
+
+.product-card__rating {
+  font-size: 0.8rem;
+  color: #ffad33;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-card__rating-count {
+  color: var(--color-text1);
+}
+
+.product-card__add {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.section__footer {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.category-card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 32px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.category-card__icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.category-card__label {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.category-card:hover {
+  background-color: var(--color-secondary2);
+  color: #fff;
+  border-color: var(--color-secondary2);
+}
+
+/* --------musikis banneri---------------- */
+
+.music-banner {
+  background: radial-gradient(circle at top left, #242424, #000);
+  border-radius: 8px;
+  padding: 40px 56px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.music-banner__eyebrow {
+  color: var(--color-button1);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.music-banner__title {
+  font-size: 2.4rem;
+  margin: 0 0 24px;
+}
+
+.music-banner__timer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.music-badge {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.music-badge span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.music-banner__image {
+  text-align: center;
+}
+
+
+
+.new-arrival-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 24px;
+}
+
+.new-arrival-card {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+/* ps5 is cardi*/
+.new-arrival-card--big {
+  background-color: #000;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+}
+
+.new-arrival-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-arrival-card__content {
+  padding: 24px;
+}
+
+.new-arrival-card__content h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.new-arrival-card__content p {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+}
+
+.new-arrival-card__link {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.new-arrival-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.new-arrival-right-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.new-arrival-card--vertical {
+  background-color: #0d0d0d;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+}
+
+/* patara ori cardi*/
+.new-arrival-right-bottom {
+  display: flex;
+  gap: 30px;               
+}
+
+.new-arrival-card--small {
+  position: relative;
+  flex: 1 1 0;
+  max-width: 570px;        
+  height: 284px;            
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.new-arrival-card__photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: auto;
+  height: 100%;      
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.new-arrival-card__content--bottom-left {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 1;
+  max-width: 70%;
+}
+
+.new-arrival-card__content--bottom-left h3 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
+
+.new-arrival-card__content--bottom-left p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.new-arrival-card__link {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.new-arrival-card--speakers {
+  color: #ffffff;
+  background: radial-gradient(circle at top left, #444444, #111111);
+}
+
+.new-arrival-card--perfume {
+  color: #ffffff;
+  background: radial-gradient(circle at top left, #555555, #111111);
+}
+
+.new-arrival-card--speakers p,
+.new-arrival-card--perfume p,
+.new-arrival-card--speakers .new-arrival-card__link,
+.new-arrival-card--perfume .new-arrival-card__link {
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .new-arrival-right-bottom {
+    flex-direction: column;
+  }
+
+  .new-arrival-card--small {
+    max-width: 100%;
+  }
+}
+/* lamazad rom dalagdes telefonze*/
+@media (max-width: 1024px) {
+  .new-arrival-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .new-arrival-card--big,
+  .new-arrival-card--vertical,
+  .new-arrival-card--small {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+
+.features-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.feature__title {
+  font-size: 1rem;
+  margin: 0 0 6px;
+}
+
+.feature__text {
+  margin: 0;
+  color: var(--color-text1);
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding-top: 60px;
+  margin-top: 40px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__logo {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+
+.footer__subtitle {
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.footer__form {
+  display: flex;
+  margin-top: 12px;
+}
+
+.footer__form input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #555;
+  background: transparent;
+  color: #fff;
+}
+
+.footer__form button {
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #555;
+  border-left: none;
+  padding: 0 14px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer__column h4 {
+  margin: 0 0 12px;
+}
+
+.footer__column p,
+.footer__column a {
+  font-size: 0.9rem;
+  margin: 0 0 6px;
+  color: #b3b3b3;
+}
+
+.footer__column a:hover {
+  color: #fff;
+}
+
+.footer__bottom {
+  border-top: 1px solid #292929;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+@media (max-width: 1024px) {
+  .header__inner {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 16px;
+  }
+
+  .nav {
+    justify-self: flex-end;
+  }
+
+  .nav__toggle {
+    display: inline-block;
+  }
+
+  .nav__list {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 70px;
+    background: #fff;
+    padding: 12px 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav__list.nav__list--open {
+    display: flex;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-categories {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+
+  .hero-banner__inner,
+  .music-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .products-row,
+  .products-grid,
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features-row {
+    grid-template-columns: 1fr;
+  }
+
+  .new-arrival-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .products-row,
+  .products-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
