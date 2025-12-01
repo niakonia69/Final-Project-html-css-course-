@@ -1,0 +1,179 @@
+.breadcrumb {
+  padding: 16px 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb__inner {
+  font-size: 0.9rem;
+  color: #7d8184;
+}
+
+.breadcrumb__link {
+  color: #7d8184;
+}
+
+.breadcrumb__link:hover {
+  color: #000;
+}
+
+.breadcrumb__sep {
+  margin: 0 6px;
+}
+
+.breadcrumb__current {
+  color: #000;
+}
+
+.about-hero {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-hero__title {
+  font-size: 2.6rem;
+  margin: 0 0 16px;
+}
+
+.about-hero__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #7d8184;
+  margin: 0 0 12px;
+}
+
+.about-hero__image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-stats {
+  padding-top: 0;
+}
+
+.about-stats__row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-stat-card {
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  padding: 24px 20px;
+  text-align: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-stat-card__value {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.about-stat-card__label {
+  font-size: 0.9rem;
+  color: #7d8184;
+}
+
+.about-stat-card:hover {
+  border-color: #db4444;
+  box-shadow: 0 0 0 1px rgba(219, 68, 68, 0.2);
+}
+
+.about-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* is sami tipis gastilva */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: white;
+}
+
+.team-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.team-wrapper {
+  width: 1170px;
+  display: flex;
+  gap: 30px;
+}
+
+.team-card {
+  flex: 1;
+  text-align: center;
+}
+
+.team-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.team-info {
+  margin-top: 12px;
+}
+
+.team-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.team-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* responsive*/
+
+@media (max-width: 1024px) {
+  .about-hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero__image {
+    order: -1; 
+  }
+
+  .about-stats__row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-stats__row {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

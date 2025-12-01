@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exclusive – Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="homepage.css" />
+  <link rel="stylesheet" href="cart.css" />
+
+  <script src="script.js" defer></script>
+</head>
+<body class="page page--cart">
+
+  <!----------fasdaklebis xazi ------->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <p class="top-bar__text">
+        Summer Sale For All Swim Suits And Free Express Delivery – OFF 50%!
+        <a href="#" class="top-bar__link">Shop Now</a>
+      </p>
+    </div>
+  </div>
+
+  <!------------headeri----->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="homepage.html" class="logo">Exclusive</a>
+
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__list">
+          <li><a href="homepage.html" class="nav__link">Home</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="signup.html" class="nav__link">Sign Up</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="header-search">
+          <input type="text" class="header-search__input" placeholder="What are you looking for?" />
+          <span class="header-search__icon">🔍</span>
+        </div>
+
+        <a href="wishlist.html" class="header-icon" aria-label="Wishlist">♡</a>
+        <a href="cart.html" class="header-icon" aria-label="Cart">🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <!---------mtavari nawili------------>
+  <main class="main cart-main">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="homepage.html">Home</a>
+        <span>/</span>
+        <span>Cart</span>
+      </nav>
+
+      <h1 class="cart-title">Cart</h1>
+
+    <!---------cxrili---------->
+      <div class="cart-table-wrapper">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th class="col-product">Product</th>
+              <th class="col-price">Price</th>
+              <th class="col-qty">Quantity</th>
+              <th class="col-subtotal">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-------item 1------->
+            <tr class="cart-item" data-price="650">
+              <td class="cart-item__product">
+                <div class="cart-item__thumb">
+                  <img src="leptopi.png" alt="ASUS FHD Gaming Laptop" />
+                </div>
+                <div class="cart-item__name">ASUS FHD Gaming Laptop</div>
+              </td>
+              <td class="cart-item__price">$650</td>
+              <td class="cart-item__qty">
+                <button class="qty-btn qty-btn--minus" type="button">-</button>
+                <input class="qty-input" type="number" min="1" value="1" />
+                <button class="qty-btn qty-btn--plus" type="button">+</button>
+              </td>
+              <td class="cart-item__subtotal">$650</td>
+            </tr>
+
+            <!---------item 2 -------------->
+            <tr class="cart-item" data-price="550">
+              <td class="cart-item__product">
+                <div class="cart-item__thumb">
+                  <img src="joistiki.png" alt="HAVIT HV-G92 Gamepad" />
+                </div>
+                <div class="cart-item__name">HAVIT HV-G92 Gamepad</div>
+              </td>
+              <td class="cart-item__price">$550</td>
+              <td class="cart-item__qty">
+                <button class="qty-btn qty-btn--minus" type="button">-</button>
+                <input class="qty-input" type="number" min="1" value="1" />
+                <button class="qty-btn qty-btn--plus" type="button">+</button>
+              </td>
+              <td class="cart-item__subtotal">$550</td>
+            </tr>
+
+            <!------item 3------->
+            <tr class="cart-item" data-price="170">
+              <td class="cart-item__product">
+                <div class="cart-item__thumb">
+                  <img src="klaviatura.png" alt="AK-900 Wired Keyboard" />
+                </div>
+                <div class="cart-item__name">AK-900 Wired Keyboard</div>
+              </td>
+              <td class="cart-item__price">$170</td>
+              <td class="cart-item__qty">
+                <button class="qty-btn qty-btn--minus" type="button">-</button>
+                <input class="qty-input" type="number" min="1" value="1" />
+                <button class="qty-btn qty-btn--plus" type="button">+</button>
+              </td>
+              <td class="cart-item__subtotal">$170</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cart-actions">
+        <a href="homepage.html" class="btn btn--ghost cart-actions__btn">Return To Shop</a>
+        <button class="btn btn--secondary2 cart-actions__btn" id="update-cart">
+          Update Cart
+        </button>
+      </div>
+
+      <!------qveda mxare ------------->
+      <div class="cart-bottom">
+    
+        <div class="cart-coupon">
+          <input type="text" class="cart-coupon__input" placeholder="Coupon Code" />
+          <button class="btn btn--secondary2 cart-coupon__btn">Apply Coupon</button>
+        </div>
+
+        <aside class="cart-total">
+          <h2 class="cart-total__title">Cart Total</h2>
+          <div class="cart-total__row">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$1,370</span>
+          </div>
+          <div class="cart-total__row">
+            <span>Shipping:</span>
+            <span>Free</span>
+          </div>
+          <div class="cart-total__divider"></div>
+          <div class="cart-total__row cart-total__row--grand">
+            <span>Total:</span>
+            <span id="cart-total">$1,370</span>
+          </div>
+          <a href="#" class="btn btn--secondary2 cart-total__checkout">
+            Proceed to Checkout
+          </a>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!---------footeri -------------->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__column">
+        <h3 class="footer__logo">Exclusive</h3>
+        <p class="footer__subtitle">Subscribe</p>
+        <p>Get 10% off your first order</p>
+        <form action="#" class="footer__form">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">➤</button>
+        </form>
+      </div>
+
+      <div class="footer__column">
+        <h4>Support</h4>
+        <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+        <p>exclusive@gmail.com</p>
+        <p>+88015-88888-9999</p>
+      </div>
+
+      <div class="footer__column">
+        <h4>Account</h4>
+        <a href="#">My Account</a>
+        <a href="#">Login / Register</a>
+        <a href="#">Cart</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Shop</a>
+      </div>
+
+      <div class="footer__column">
+        <h4>Quick Link</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms Of Use</a>
+        <a href="#">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© Copyright Rimel 2022. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
